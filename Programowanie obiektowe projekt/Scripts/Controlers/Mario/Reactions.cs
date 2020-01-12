@@ -102,7 +102,7 @@ public class Reactions : MonoBehaviour
 		else
 		{
 			_capsule.offset = new Vector2(0,1);
-			_capsule.size = new Vector2(1, 2);
+			_capsule.size = new Vector2(1, 1.9f);
 		}
 	}
 

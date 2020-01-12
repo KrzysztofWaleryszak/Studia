@@ -5,11 +5,12 @@ using UnityEngine;
 public class AxeControler : MonoBehaviour
 {
 	bool _start=false;
+	bool _stop = false;
 	public Transform pivot;
 	public GameObject[] bridges;
 	private void Update()
 	{
-		if(_start&&transform.rotation.z<110/360)
+		if(_start&&!_stop)
 		{
 			pivot.Rotate(0, 0, 10);
 		}
@@ -22,6 +23,7 @@ public class AxeControler : MonoBehaviour
 		}else
 			if(collision.name== "bridge_rope")
 		{
+			_stop = true;
 			StartCoroutine(DestroyBridge());
 			Destroy(collision.gameObject);
 		}
