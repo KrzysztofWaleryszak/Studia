@@ -28,6 +28,7 @@ public class Walking : MonoBehaviour
 		_animator = GetComponent<Animator>();
 		_camera = FindObjectOfType<Camera>();
 		_reactions = GetComponent<Reactions>();
+		Time.timeScale = 1;
 	}
 
 	private void FixedUpdate()
